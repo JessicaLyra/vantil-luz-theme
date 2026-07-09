@@ -1,36 +1,49 @@
-Vantil Luz
+# Vantil Luz
 
-Tema WordPress personalizado desenvolvido a partir de uma landing page criada inicialmente no Lovable e posteriormente convertida para um tema WordPress completo.
+Tema WordPress personalizado desenvolvido a partir de uma landing page criada inicialmente no **Lovable** e posteriormente convertida para um tema WordPress completo, focado em desempenho, organização de código e facilidade de manutenção.
 
-Sobre o projeto
+---
 
-O objetivo deste projeto é transformar uma landing page moderna em um tema WordPress profissional, com código organizado, estrutura escalável e possibilidade de gerenciamento de conteúdo através do painel administrativo.
+## 📖 Sobre o projeto
 
-Tecnologias
-WordPress
-PHP
-HTML5
-CSS3
-JavaScript
-ACF (Advanced Custom Fields)
-Git
-Funcionalidades
-Tema WordPress personalizado
-Header e Footer próprios
-Menu responsivo
-Landing page otimizada para conversão
-Animações de entrada com AOS
-Seções editáveis pelo painel WordPress
-Estrutura preparada para campos personalizados
-Estrutura do tema
+O objetivo deste projeto é transformar uma landing page moderna em um tema WordPress profissional, utilizando boas práticas de desenvolvimento, estrutura escalável e integração com o painel administrativo para gerenciamento de conteúdo.
 
+---
+
+## 🚀 Tecnologias
+
+- WordPress
+- PHP
+- HTML5
+- CSS3
+- JavaScript
+- ACF (Advanced Custom Fields)
+- Git
+
+---
+
+## ✨ Funcionalidades
+
+- Tema WordPress personalizado
+- Header e Footer próprios
+- Menu responsivo
+- Landing Page otimizada para conversão
+- Animações utilizando AOS
+- Estrutura preparada para gerenciamento via WordPress
+- Organização modular dos arquivos
+- Base preparada para utilização de campos personalizados (ACF)
+
+---
+
+## 📁 Estrutura do projeto
+
+```text
 vantil-luz/
-
 │
 ├── assets/
-│ ├── css/
-│ ├── js/
-│ └── icons/
+│   ├── css/
+│   ├── js/
+│   └── icons/
 │
 ├── template-parts/
 │
@@ -40,12 +53,23 @@ vantil-luz/
 ├── footer.php
 ├── navigation.php
 └── style.css
+```
 
-Próximos passos
-Implementação de campos personalizados com ACF
-Conversão das seções da landing page em componentes editáveis
-Otimização de CSS e JavaScript
-Melhorias de performance e responsividade
-Desenvolvido por
+---
 
-Jessica Lyra
+## 🎯 Próximos passos
+
+- Implementar campos personalizados com ACF
+- Tornar todas as seções editáveis pelo painel administrativo
+- Melhorar organização dos componentes
+- Otimizar CSS e JavaScript
+- Melhorar performance e responsividade
+- Adicionar suporte completo ao Customizer
+
+---
+
+## 👩‍💻 Desenvolvido por
+
+**Jessica Lyra**
+
+Desenvolvedora Web especializada em WordPress, criação de temas personalizados, landing pages e soluções web modernas.
