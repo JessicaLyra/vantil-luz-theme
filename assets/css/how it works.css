@@ -1,0 +1,169 @@
+/* HOW IT WORKS */
+
+.how-it-works {
+    background: var(--muted);
+}
+
+
+.how-it-works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+    align-items: center;
+}
+
+
+/* IMAGE */
+
+.how-image {
+    position: relative;
+}
+
+
+.how-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: var(--shadow-elegant);
+}
+
+
+/* BADGE */
+
+.how-badge {
+    position: absolute;
+    bottom: -24px;
+    right: -24px;
+
+    background: var(--secondary);
+    color: var(--primary);
+
+    padding: 24px;
+    border-radius: 16px;
+
+    max-width: 280px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+
+.how-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+
+.how-number {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+.how-text {
+    font-size: 16px;
+}
+
+
+/* CONTENT */
+
+.how-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.how-header .section-title {
+    margin-top: 12px;
+}
+
+
+/* STEPS */
+
+.steps {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.step-item {
+    display: flex;
+    gap: 20px;
+}
+
+
+.step-number {
+    flex-shrink: 0;
+
+    width: 56px;
+    height: 56px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: var(--primary);
+    color: var(--secondary);
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.step-item h3 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.step-item p {
+    margin-top: 6px;
+    margin-bottom: 0;
+
+    color: var(--muted-foreground);
+    line-height: 1.7;
+}
+
+
+/* RESPONSIVO */
+
+@media(max-width: 992px){
+
+    .how-it-works-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+
+    .how-badge {
+        right: 20px;
+    }
+
+}
+
+
+@media(max-width: 640px){
+
+    .how-badge {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 20px;
+    }
+
+
+    .step-item {
+        gap: 15px;
+    }
+
+
+    .step-number {
+        width: 48px;
+        height: 48px;
+    }
+
+}

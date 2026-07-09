@@ -1,0 +1,160 @@
+/* ==========================
+   Fontes gerais
+========================== */
+
+:root{
+    --font-heading: "Playfair Display", serif;
+    --font-body: "Manrope", sans-serif;
+    --card: #ffffff;
+    --primary: #111827;
+    --secondary: #facc15;
+    --muted-foreground: #6b7280;
+    --border: #e5e7eb;
+    --shadow-elegant: 0 20px 40px rgba(0,0,0,.08);
+    --muted:#f8fafc;
+    --muted-foreground:#6b7280;
+    
+}
+
+body{
+    font-family: var(--font-body);
+   
+
+    color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span{
+    font-family: var(--font-heading);
+}
+
+/* ==========================
+   Cores
+========================== */
+
+.text-secondary{
+    color:#e4ae3c;
+}
+
+.text-white-secondary {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.secondary-bg {
+    background-color: #e4ae3c;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+/* ==========================
+   Container
+========================== */
+
+.container{
+    width: min(1280px, calc(100% - 2rem));
+    margin-inline: auto;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+ul{
+    list-style:none;
+}
+
+button{
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+.button-primary{
+    background:#D9B14A;
+    color:#17233C;
+    padding:20px 40px;
+    border-radius:999px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow: 0px 0px 100px 0px rgb(194 175 10 / 96%);
+    display: inline-flex;
+    gap:.5rem;
+
+}
+
+.button-primary img {
+    width:20px;
+    height:20px;
+}
+
+.button-primary:hover{
+    transform:translateY(-2px);
+    filter:brightness(110%);
+}
+
+.button-secondary{
+    background:transparent;
+    border:1px solid #ffffff4d;
+    padding:20px 40px;    
+    border-radius:999px;
+    font-weight:600;
+    transition:.3s;
+    display: inline-flex;
+    gap:.5rem;
+  
+
+}
+
+.button-secondary:hover{
+    background: #ffffff21;
+}
+
+.section-header {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-subtitle {
+    color: var(--secondary);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-weight: 500;
+}
+
+.section-title {
+    margin-top: 12px;
+    font-size: 42px;
+    line-height: 1.2;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.section-description {
+    margin-top: 16px;
+    color: var(--muted-foreground);
+    font-size: 16px;
+    line-height: 1.7;
+}

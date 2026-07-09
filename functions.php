@@ -3,11 +3,18 @@
 if (!defined('ABSPATH')) {
     exit;
 }
-
+require get_template_directory() . '/inc/customizer.php';
 /**
  * Configuração do tema
  */
 function vantil_luz_setup() {
+
+    add_theme_support('custom-logo', [
+        'height'      => 80,
+        'width'       => 220,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ]);
 
     add_theme_support('title-tag');
 
@@ -28,6 +35,8 @@ function vantil_luz_setup() {
     register_nav_menus(array(
         'primary' => __('Menu Principal', 'vantil-luz'),
     ));
+
+
 }
 
 add_action('after_setup_theme', 'vantil_luz_setup');
@@ -38,18 +47,59 @@ add_action('after_setup_theme', 'vantil_luz_setup');
  */
 function vantil_luz_assets() {
 
+    $version = wp_get_theme()->get('Version');
+
+    $styles = [
+        'global',
+        'header',
+        'hero',
+        'about',
+        'benefits',
+        'how it works',
+        'services',
+        'testimonials',
+        'faq',
+        'cta',
+        'contact',
+        'footer',
+    ];
+     foreach ($styles as $style) {
+        wp_enqueue_style(
+            "vantil-{$style}",
+            get_template_directory_uri() . "/assets/css/{$style}.css",
+            [],
+            $version
+        );
+    }
+
     wp_enqueue_style(
         'vantil-style',
         get_template_directory_uri() . '/assets/css/style.css',
-        array(),
-        '1.0.0'
+        [],
+        $version,
+        true
     );
 
     wp_enqueue_script(
         'vantil-main',
         get_template_directory_uri() . '/assets/js/main.js',
-        array(),
-        '1.0.0',
+       [],
+        $version,
+        true
+    );
+
+    wp_enqueue_style(
+    'aos',
+    'https://unpkg.com/aos@2.3.1/dist/aos.css',
+    [],
+    '2.3.4'
+    );
+
+    wp_enqueue_script(
+        'aos',
+        'https://unpkg.com/aos@2.3.1/dist/aos.js',
+        [],
+        '2.3.4',
         true
     );
 }

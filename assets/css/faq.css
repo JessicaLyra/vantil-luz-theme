@@ -1,0 +1,118 @@
+/* FAQ */
+.faq{
+    background:var(--background);
+}
+.faq-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:64px;
+    align-items:center;
+    margin-top:64px;
+}
+.faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+.faq-item{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    overflow:hidden;
+}
+.faq-question{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    padding:20px;
+    background:none;
+    border:0;
+    cursor:pointer;
+    text-align:left;
+    transition:.3s;
+    font-size:16px;
+}
+.faq-question:hover{
+    background:var(--muted);
+}
+.faq-question span:first-child{
+    color:var(--primary);
+    font-weight:600;
+}
+.faq-icon{
+    width:20px;
+    height:20px;
+    color:var(--secondary);
+    flex-shrink:0;
+    transition:transform .3s ease;
+}
+.faq-item.active .faq-icon{
+    transform:rotate(180deg);
+}
+.faq-answer{
+    display:grid;
+    grid-template-rows:0fr;
+    transition:grid-template-rows .3s ease;
+}
+.faq-answer p{
+    overflow:hidden;
+    padding:0 20px ;
+    margin:0;
+    color:var(--muted-foreground);
+    line-height:1.7;
+    font-size:16px;
+}
+
+.faq-item.active .faq-answer{
+    grid-template-rows:1fr;
+}
+
+.faq-image{
+    display:flex;
+    justify-content:flex-end;
+}
+.faq-image-wrapper{
+    position:relative;
+}
+.faq-image img{
+    display:block;
+    width:100%;
+    border-radius:16px;
+    box-shadow:var(--shadow-elegant);
+}
+.faq-badge{
+    position:absolute;
+    right:-16px;
+    bottom:-16px;
+    background:var(--secondary);
+    color:var(--primary);
+    padding:16px 20px;
+    border-radius:12px;
+    box-shadow:var(--shadow-elegant);
+}
+.faq-badge-title{
+    font-size:24px;
+    font-weight:700;
+}
+.faq-badge-text{
+    font-size:16px;
+}
+@media(max-width:992px){
+    .faq-grid{
+        grid-template-columns:1fr;
+        gap:48px;
+    }
+    .faq-image{
+        justify-content:center;
+    }
+}
+@media(max-width:640px){
+    .faq-badge{
+        position:relative;
+        right:auto;
+        bottom:auto;
+        margin-top:20px;
+    }
+}

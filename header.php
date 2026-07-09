@@ -15,13 +15,4 @@
 
 <?php wp_body_open(); ?>
 
-<header>
-
-    <?php
-    wp_nav_menu(array(
-        'theme_location' => 'primary',
-        'container' => false,
-    ));
-    ?>
-
-</header>
+<?php get_template_part('template-parts/header/navigation'); ?>
