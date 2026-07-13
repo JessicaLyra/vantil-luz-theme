@@ -51,7 +51,7 @@ span{
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: clamp(2.4rem, 4.8vw, 4rem);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -68,6 +68,11 @@ p {
 .container{
     width: min(1280px, calc(100% - 2rem));
     margin-inline: auto;
+}
+
+.section {
+    padding: 96px 0;
+    scroll-margin-top: 130px;
 }
 
 a{
@@ -157,4 +162,18 @@ button{
     color: var(--muted-foreground);
     font-size: 16px;
     line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 72px 0;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-description {
+        font-size: 15px;
+    }
 }

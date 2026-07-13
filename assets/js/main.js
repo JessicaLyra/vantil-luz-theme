@@ -69,6 +69,54 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     }
 
+    // Navegação por âncoras
+    document.addEventListener('click', (event) => {
+        const link = event.target.closest('a[href]');
+
+        if (!link) {
+            return;
+        }
+
+        const href = link.getAttribute('href');
+
+        if (!href || !href.includes('#')) {
+            return;
+        }
+
+        try {
+            const url = new URL(href, window.location.href);
+
+            if (url.origin !== window.location.origin || !url.hash) {
+                return;
+            }
+
+            const targetId = url.hash.substring(1);
+            const target = document.getElementById(targetId);
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            const offsetTop = target.getBoundingClientRect().top + window.scrollY - (header ? header.offsetHeight + 24 : 24);
+
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+
+            if (menu && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+                button?.setAttribute('aria-expanded', 'false');
+            }
+
+            history.pushState(null, '', url.hash);
+        } catch (error) {
+            console.warn('Erro ao navegar para âncora:', error);
+        }
+    });
+
 
     // Animações AOS
     if(typeof AOS !== 'undefined'){

@@ -18,6 +18,7 @@ O objetivo deste projeto é transformar uma landing page moderna em um tema Word
 - CSS3
 - JavaScript
 - ACF (Advanced Custom Fields)
+- Contact Form 7
 - Git
 
 ---
@@ -26,12 +27,14 @@ O objetivo deste projeto é transformar uma landing page moderna em um tema Word
 
 - Tema WordPress personalizado
 - Header e Footer próprios
-- Menu responsivo
+- Menu responsivo com navegação por âncoras e scroll suave
 - Landing Page otimizada para conversão
+- Homepage com seções editáveis via ACF
+- Upload de imagens configurável para áreas específicas da homepage
+- Formulário de contato integrado ao Contact Form 7
+- Layout responsivo com ajustes de espaçamento e estrutura em telas menores
 - Animações utilizando AOS
-- Estrutura preparada para gerenciamento via WordPress
 - Organização modular dos arquivos
-- Base preparada para utilização de campos personalizados (ACF)
 
 ---
 
@@ -59,12 +62,11 @@ vantil-luz/
 
 ## 🎯 Próximos passos
 
-- Implementar campos personalizados com ACF
-- Tornar todas as seções editáveis pelo painel administrativo
-- Melhorar organização dos componentes
-- Otimizar CSS e JavaScript
-- Melhorar performance e responsividade
-- Adicionar suporte completo ao Customizer
+- Refinar detalhes visuais da homepage com base em feedback do cliente
+- Expandir o uso do ACF para outras páginas ou blocos do tema
+- Melhorar organização dos componentes e reutilização de código
+- Continuar a otimização de performance e responsividade
+- Explorar mais integrações com o Customizer e opções de branding
 
 ---
 

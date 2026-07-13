@@ -1,6 +1,7 @@
 /* TESTIMONIALS */
 .testimonials{
     background:var(--muted);
+    padding:96px 0;
 }
 .testimonials-grid{
     margin-top:64px;
@@ -61,6 +62,10 @@
     }
 }
 @media(max-width:640px){
+    .testimonials{
+        padding:72px 0;
+    }
+
     .testimonials-grid{
         grid-template-columns:1fr;
     }

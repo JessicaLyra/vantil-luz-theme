@@ -1,11 +1,12 @@
 /* FAQ */
 .faq{
     background:var(--background);
+    padding:96px 0;
 }
 .faq-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:64px;
+    gap:clamp(40px, 6vw, 64px);
     align-items:center;
     margin-top:64px;
 }
@@ -75,6 +76,7 @@
 }
 .faq-image-wrapper{
     position:relative;
+    width:min(100%, 480px);
 }
 .faq-image img{
     display:block;
@@ -109,10 +111,19 @@
     }
 }
 @media(max-width:640px){
+    .faq{
+        padding:72px 0;
+    }
+
     .faq-badge{
         position:relative;
         right:auto;
         bottom:auto;
         margin-top:20px;
+        padding:16px 18px;
+    }
+
+    .faq-question{
+        padding:18px;
     }
 }
